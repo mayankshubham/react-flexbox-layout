@@ -1,0 +1,224 @@
+@media(min-width: 992px) {
+	.container {
+	    display: flex;
+	    flex-direction: column;
+	    width: 100%;
+	}
+
+	.header {
+
+	    z-index: 0;
+	    flex: 0 0 50px;
+	    display: flex;
+	}
+
+	.app {
+	    flex: 1 1 100vh;
+	    display: flex;
+	    width: 100%;
+	}
+
+	.leftNav {
+
+	    flex: 0 0 256px;
+	    order: 0;
+	    float: left;
+	    margin-left: -20px;
+	}
+
+	.rightNav {
+
+	    flex: 0 0 256px;
+	    order: 2;
+	    float: right;
+	    margin-right: -20px;
+	}
+
+	.content {
+		width: 100%;
+		height: 100vh;
+	    order: 1;
+	}
+
+	.contentpanels {
+		margin: 20px;
+	}
+
+	.main{
+      position: absolute;
+      width: 100%; 
+      float: right;
+    }
+
+    nav.sidebar:hover + .main{
+      margin-left: 256px;
+    }
+
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+      margin-left: 0px;
+    }
+
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+    }
+    
+    nav.sidebar a{
+      padding-right: 13px;
+    }
+
+    nav.sidebar .navbar-nav > li:first-child{
+      border-top: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav > li{
+      border-bottom: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+      padding: 0 0px 0 0px;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+      color: #777;
+    }
+
+    nav.sidebar{
+      width: 256px;
+      height: 100%;
+      float: left;
+      margin-bottom: 0px;
+    }
+
+    nav.sidebar li {
+      width: 100%;
+    }
+
+    nav.sidebar:hover{
+      margin-left: 0px;
+    }
+
+    .forAnimate{
+      opacity: 0;
+    }
+
+}
+
+@media(max-width: 991px) {
+	.container {
+	    width: 100%;
+	}
+
+	.header {
+
+	    z-index: 0;
+	    flex: 0 0 50px;
+	    display: flex;
+	}
+
+	.app {
+	    flex: 1 1 100vh;
+	    display: flex;
+	    width: 100%;
+	}
+
+	.leftNav {
+		display: none;
+	}
+
+	.rightNav {
+		display: none;
+	}
+
+	.content {
+		width: 100%;
+		height: 100vh;
+	    order: 1;
+	}
+
+	.contentpanels {
+		margin: 20px;
+	}
+}
+
+@media (min-width: 1330px) {
+
+    .main{
+      width: 256px;
+      left: 0;
+    }
+
+    nav.sidebar{
+      margin-left: 0px;
+      float: left;
+    }
+
+    nav.sidebar .forAnimate{
+      opacity: 1;
+    }
+    .content {
+      width: 100%;
+      height: 100vh;
+      order: 1;
+  }
+}
+.content {
+      overflow-y: scroll;
+  }
+body,html{
+	height: 100%;
+  overflow: hidden;
+}
+.navbar {
+	position: fixed;
+}
+nav.sidebar, .main{
+  -webkit-transition: margin 200ms ease-out;
+  -moz-transition: margin 200ms ease-out;
+  -o-transition: margin 200ms ease-out;
+  transition: margin 200ms ease-out;
+}
+
+.main{
+	position: fixed;
+} 
+
+nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+    background-color: transparent;
+}
+nav:hover .forAnimate{
+    opacity: 1;
+}
+ 
+.hamburger{
+  background:none;
+  position:fixed;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.hamburger.left{
+  left: 0;
+
+}
