@@ -1,3 +1,4 @@
+
 # ReactReduxApp
 
 Clone the Repository with command
@@ -19,3 +20,7 @@ Start the Webpack-dev-server
 Open the page in you browser, for instance if your application starts on port 8080
 
     http://localhost:8080
+
+
+Simple Responsive layout with Two Sidebars and a Navbar with infinite scrollable content in the middle
+
